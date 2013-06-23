@@ -16,7 +16,8 @@
         <table class="table table-hover">
             <!-- This will create a row for every item within our items object (both of these refer to the forums -->
             <tr ng-repeat="item in items">
-                <td width="100%">Titulo: <a href="#/projeto/{{item.id}}">{{item.titulo}}</a></td>
+                <td width="80%">Titulo: <a href="#/projeto/{{item.id}}">{{item.titulo}}</a></td>
+                <td width="20%"><a href="#/projeto/{{item.id}}">{{item.user.name}}</a></td>
 
                 <!-- When the user clicks this button it will call the 'destory()' method within the controller -->
                 <td><a ng-click="destroy($index)" href=""><i class="icon-trash"></i></a></td>

@@ -22,6 +22,12 @@ app.controller('ProjetoCreateController', ['$scope', '$location', 'Projeto', fun
     $scope.save = function() {
 
         //Create the forum object to send to the back-end
+        if(!window.user){
+            alert("Vc precisa estar logado no facebook para postar um projeto.");
+            return;
+        }
+        $scope.projeto.user = window.user;
+
         var projeto = new Projeto($scope.projeto);
 
         //Save the forum object
