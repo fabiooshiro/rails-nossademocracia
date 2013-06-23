@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <title>Nossa Democracia</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="navbar navbar-static-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/">Nossa Democracia</a>
+    </div>
+  </div>
+  <div id="loading"><b>Loading...</b></div>
+</div>
+
+<a href="https://github.com/fabiooshiro/rails-nossademocracia">
+  <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub">
+</a>
+
+<div class="container">
+  <div ng-view="ng-view"></div>
+</div>
+</body>
+</html>

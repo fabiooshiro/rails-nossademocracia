@@ -1,5 +1,4 @@
-*.rbc
-*.sassc
+assc
 .sass-cache
 capybara-*.html
 .rspec
@@ -14,3 +13,4 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+

@@ -1,0 +1,25 @@
+'use strict';
+/*
+    This is our main launch point from Angular. We'll put anything to do with the
+    general well being of our app in this file. For now it'll basically just contain
+    the routing information.
+
+    Our module will be called 'app'.
+
+    Note: We need the empty array after the 'app' declaration, without it, you
+    get an error complaining about 'No module <MODULE>'.
+ */
+angular.module('app', ['ngResource', 'app.loading'])
+    .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+        $routeProvider
+            .when('/forum',          {controller: 'ForumIndexController',    templateUrl: '<%= asset_path('templates/index.html') %>'})
+            .when('/forum/new', {controller: 'ForumCreateController',   templateUrl: '<%= asset_path('templates/new.html') %>'})
+            .when('/forum/:id', {controller: 'ForumShowController',     templateUrl: '<%= asset_path('templates/show.html') %>'})
+            .when('/', {controller: 'ProjetoIndexController',     templateUrl: '<%= asset_path('templates/projeto-index.html') %>'})
+            .when('/projetos', {controller: 'ProjetoIndexController',     templateUrl: '<%= asset_path('templates/projeto-index.html') %>'})
+            .when('/projeto/new', {controller: 'ProjetoCreateController',     templateUrl: '<%= asset_path('templates/projeto-new.html') %>'})
+            .when('/projeto/:id', {controller: 'ProjetoShowController',     templateUrl: '<%= asset_path('templates/projeto-show.html') %>'})
+            .otherwise({redirectTo: '/'});
+}]);
+
+
