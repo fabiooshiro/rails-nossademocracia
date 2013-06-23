@@ -2,3 +2,11 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 run SimpleForum::Application
+
+#require "rubygems"
+#require "bundler"
+
+#Bundler.require
+
+#require "./app"
+#run Sinatra::Application

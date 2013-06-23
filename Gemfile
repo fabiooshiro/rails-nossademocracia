@@ -15,7 +15,8 @@ group :assets do
 end
 
 group :development do
-  gem 'sqlite3'
+  gem 'mysql2'
+  #gem 'sqlite3'
 end
 
 group :production do
@@ -24,9 +25,14 @@ end
 
 gem 'jquery-rails'
 
-gem "koala"
-
 gem 'simple_form'
 
-gem 'mysql2'
+# ini facebook heroku part
+source :gemcutter
 
+gem "sinatra"
+gem "koala"
+gem "json", "1.5.5"
+gem "httparty"
+gem "rack", "1.3.10"
+# end facebook heroku part
