@@ -28,11 +28,11 @@ gem 'jquery-rails'
 gem 'simple_form'
 
 # ini facebook heroku part
-source :gemcutter
+#source :gemcutter
 
 gem "sinatra"
 gem "koala"
 gem "json", "1.5.5"
 gem "httparty"
-gem "rack", "1.3.10"
+#gem "rack", "1.3.10"
 # end facebook heroku part
