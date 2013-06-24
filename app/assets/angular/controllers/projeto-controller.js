@@ -4,7 +4,7 @@ var app = angular.module('app');
 
 function chkUserLogin(){
     if(!window.user){
-        alert("Vc precisa estar logado no facebook para postar um projeto.");
+        alert("Para isso vc precisa estar logado no facebook.");
         return false;
     }
     return true;
