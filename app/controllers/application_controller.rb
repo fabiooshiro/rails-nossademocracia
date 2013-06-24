@@ -10,4 +10,16 @@ class ApplicationController < ActionController::Base
     # but we still want the layout (since it has the App bootstrap code)
     render :layout => 'application', :nothing => true
   end
+
+  def find_or_create_user_by_facebookid(params_user)
+    user = User.where("facebookid = ?", params_user[:id]).first
+    unless user
+      user = User.new()
+      user.name = params_user[:name]
+      user.facebookid = params_user[:id]
+      user.save()
+    end
+    return user
+  end
+
 end

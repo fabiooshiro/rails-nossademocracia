@@ -2,3 +2,11 @@
 <div>
     {{projeto.conteudo}}
 </div>
+<div class="well">
+	Você é a favor?<br/>
+	<input type="button" ng-click="votarSim()" value="Sim" class="btn" />
+	<input type="button" ng-click="votarNao()" value="Nao" class="btn" />
+	<div>
+		A favor {{total.sim}} vs {{total.nao}} Contra
+	</div>
+</div>

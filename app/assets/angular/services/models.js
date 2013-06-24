@@ -12,3 +12,7 @@ app.factory('Comment', ['$resource', function($resource) {
 app.factory('Projeto', ['$resource', function($resource) {
     return $resource('/projetos/:id', {id: '@id'});
 }]);
+
+app.factory('Voto', ['$resource', function($resource) {
+    return $resource('/votos/:id', {id: '@id'});
+}]);
