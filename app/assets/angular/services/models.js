@@ -16,3 +16,7 @@ app.factory('Projeto', ['$resource', function($resource) {
 app.factory('Voto', ['$resource', function($resource) {
     return $resource('/votos/:id', {id: '@id'});
 }]);
+
+app.factory('User', ['$resource', function($resource) {
+    return $resource('/users/:id', {id: '@id'}, {update: {method: 'PUT'}});
+}]);

@@ -19,6 +19,8 @@ angular.module('app', ['ngResource', 'app.loading'])
             .when('/projetos', {controller: 'ProjetoIndexController',     templateUrl: '<%= asset_path('templates/projeto-index.html') %>'})
             .when('/projeto/new', {controller: 'ProjetoCreateController',     templateUrl: '<%= asset_path('templates/projeto-new.html') %>'})
             .when('/projeto/:id', {controller: 'ProjetoShowController',     templateUrl: '<%= asset_path('templates/projeto-show.html') %>'})
+            .when('/users', {controller: 'UserIndexController',     templateUrl: '<%= asset_path('templates/user-index.html') %>'})
+            .when('/user/:id', {controller: 'UserShowController',     templateUrl: '<%= asset_path('templates/user-show.html') %>'})
             .otherwise({redirectTo: '/'});
 }]);
 

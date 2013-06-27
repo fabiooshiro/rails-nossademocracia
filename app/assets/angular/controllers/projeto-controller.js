@@ -10,9 +10,14 @@ function chkUserLogin(){
     return true;
 }
 
-app.controller('ProjetoIndexController', ['$scope', 'Projeto', function($scope, Projeto) {
+app.controller('ProjetoIndexController', ['$scope', '$location', 'Projeto', function($scope, $location, Projeto) {
     //Grab all forums from the server
     $scope.items = Projeto.query();
+
+    $scope.showUser = function(){
+        if(!chkUserLogin()) return;
+        $location.path('/user/' + user.id);
+    }
 
     //Destroy method for deleting a forum
     $scope.destroy = function(index) {

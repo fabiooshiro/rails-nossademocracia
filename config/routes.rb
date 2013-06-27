@@ -4,5 +4,6 @@ SimpleForum::Application.routes.draw do
   end
   resources :projetos, :defaults => {format: :json}
   resources :votos, :defaults => {format: :json}
+  resources :users, :defaults => {format: :json}
   root to: 'application#index'
 end

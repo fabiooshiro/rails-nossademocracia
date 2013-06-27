@@ -27,6 +27,9 @@ gem 'jquery-rails'
 
 gem 'simple_form'
 
+# para fazer a arvore
+gem 'nested_set'
+
 # ini facebook heroku part
 #source :gemcutter
 
