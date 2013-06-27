@@ -1,10 +1,14 @@
 <h2>Representante</h2>
 <div>
+	<div ng-show="user.representante.name">
+		O seu representante atual é {{user.representante.name}}
+	</div>
 	<legend>Digite o ID do seu representante</legend>
 	<label>ID:</label><input type="text" ng-model="user.parent_id" />
 	<div>
 		<input type="button" value="Salvar" ng-click="save()" class="btn"/>
 	</div>
+	
 </div>
 <div>
 	O seu ID é {{user.id}}
