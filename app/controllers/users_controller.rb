@@ -3,7 +3,6 @@ class UsersController < InheritedResources::Base
 
 	def show
 		@user = User.find_by_facebookid(params[:id])
-		logger.debug @user.representante.name
 		respond_to do |format|
 			format.html # index.html.erb
 			format.xml  { render :xml => @user}
