@@ -34,8 +34,17 @@ gem 'nested_set'
 #source :gemcutter
 
 gem "sinatra"
-gem "koala"
+#gem "koala"
 gem "json", "1.5.5"
 gem "httparty"
 #gem "rack", "1.3.10"
 # end facebook heroku part
+
+gem 'devise'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'twitter'
+gem 'fb_graph'
+gem 'nifty-generators'
+
+gem "mocha", :group => :test

@@ -28,4 +28,5 @@ class UsersController < InheritedResources::Base
 	def destroy
 		logger.debug "entrou nao sai :-)"
 	end
+
 end

@@ -1,0 +1,48 @@
+
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "Molto Soldi", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <% if signed_in? %>
+ 		<li id="fat-menu" class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Transactions <b class="caret"></b>
+            </a>
+            
+ 		</li>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Account <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Profile", '/users/' + current_user.id.to_s %></li>
+				<li><%= link_to "Authentications", authentications_url %></li>
+                <li><%= link_to "Settings", edit_user_registration_path %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+                </li>
+              </ul>
+            </li>
+          <% else %>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Sign In <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Twitter", user_omniauth_authorize_path(:twitter) %></li>
+                <li><%= link_to "Facebook", user_omniauth_authorize_path(:facebook) %></li>	
+                <li class="divider"></li>
+                <li>
+                  <li><%= link_to "Sign in", new_user_session_path %></li>
+                </li>
+              </ul>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
